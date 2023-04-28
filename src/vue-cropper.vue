@@ -183,7 +183,7 @@ export default {
   },
   props: {
     img: {
-      type: [String, Blob, null, File],
+      type: typeof document !== 'undefined' ? [String, Blob, null, File] : String,
       default: ""
     },
     // 输出图片压缩比
